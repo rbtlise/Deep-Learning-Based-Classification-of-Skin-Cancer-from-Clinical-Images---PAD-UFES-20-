@@ -26,12 +26,13 @@ pip install torch torchvision pandas numpy scikit-learn pillow matplotlib seabor
 File Structure
 Your workspace folder structure should match the following configuration:
 
-Plaintext
+
 ├── metadata.csv                 # Raw clinical metadata file
 ├── images/                      # Directory containing clinical smartphone photos (.jpg)
 ├── Skin_Cancer_main.py          # Main execution script
 ├── Skin_Cancer_EDA.py           # Exploratory Data ANalysis execution script
 └── README.md                    # Project documentation
+
 Configuration Setup
 Before executing the pipeline, check the CONFIG dictionary and file paths inside main.py.
 
@@ -68,7 +69,7 @@ python main.py
 3. What Happens During Execution
 Upon launching, the script will sequentially execute the following processing stages:
 
-Data Cleansing & Preprocessing: Drops duplicate rows, dropped administrative identifiers (patient_id), and applies mean/mode missing value imputation.
+Data Cleansing and Preprocessing: Drops duplicate rows, dropped administrative identifiers (patient_id), and applies mean/mode missing value imputation.
 
 Stratified K-Fold Generation: Splits data into 5 distinct folds while keeping global class balance constant across training/validation sets.
 
@@ -77,7 +78,3 @@ Leakage-Free Scaling: Fits a StandardScaler on the training partition age data a
 Model Training: Optimizes network weights over 20 epochs using the Adam optimizer and enforces Weighted Cross-Entropy Loss to penalize minority-class mistakes.
 
 Evaluation Output: Automatically calculates and displays per-class Sensitivity (Recall), Specificity, and prints out a comprehensive Confusion Matrix for each active fold.
-
-
-### Direct Customization Tips:
-* **Images Directory:** If your dataset loader expects a custom mapping folder or a diction
