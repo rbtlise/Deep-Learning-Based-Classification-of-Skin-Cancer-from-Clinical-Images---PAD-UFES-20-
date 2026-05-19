@@ -1,7 +1,5 @@
 # Deep-Learning-Based-Classification-of-Skin-Cancer-from-Clinical-Images---PAD-UFES-20-
 
-Here is a clean, professional, and well-structured README.md file tailored specifically for your multimodal skin cancer classification project.
-
 # Multimodal Skin Cancer Classification Platform
 
 An advanced deep learning framework designed to classify skin lesions into six distinct pathologies using a parallel multimodal architecture. The platform combines deep spatial features from clinical smartphone images with structured patient metadata (demographics, clinical history) to optimize diagnostic sensitivity.
