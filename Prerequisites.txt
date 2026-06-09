@@ -1,0 +1,26 @@
+Prerequisites
+Ensure you have Python 3.8+ and a CUDA-capable GPU environment (highly recommended for training acceleration).
+
+Install the required dependencies:
+
+pip install torch torchvision pandas numpy scikit-learn pillow matplotlib seaborn
+
+File Structure : 
+Your workspace folder structure should match the following configuration:
+
+├── metadata.csv                 # Raw clinical metadata file
+├── images/                      # Directory containing clinical smartphone photos (.jpg)
+├── Skin_Cancer_main.py          # Main execution script
+├── Skin_Cancer_EDA.py           # Exploratory Data ANalysis execution script
+└── README.md                    # Project documentation
+
+You can also store metadata.csv and images in other folders.
+
+Configuration Setup Before running the script : Prepare and link dataset in Skin_Cancer_main (matadata and images) and Skin_Cancer_EDA (metadata)
+
+If running inside a Jupyter or Google Colab notebook, mount your Google Drive workspace first:
+
+from google.colab import drive
+drive.mount('/content/drive')
+Add the path to your images in the main script (image path)
+Add the path to your metadata in the main script (metadata path)
